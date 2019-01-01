@@ -184,10 +184,22 @@ Hbase为了简化集群部署，已经内置了zookeeper，大部分时候使用
 
 6. 访问http://localhost:60010，可以看到如下画面
 
-   <img src="./imgs/localhost60010Web_Interface.png" height="200" width="200">
+   <img src="./imgs/localhost60010Web_Interface.png">
 
 
 7. 至此，Hbase的伪分布式集群基本搭建完毕~
+
+
+
+8. Java开发环境配置（将HBase库导入项目即可，一般可以直接完成以下的第二个步骤）
+
+   * 在Eclipse中，点击window-->Preferences-->Java-->Build Path-->Add Library-->User Library-->User Libraries--> 点击New 输入Libraries ，OK
+
+     <img src="./imgs/eclipse_habse_java_001.png">
+
+   * 然后右键项目，BuildPath-->Configure Bulid Path --> Libraries 。添加Libraries ，选择UserLibrary
+
+     <img src="./imgs/eclipse_habse_java_002.png">
 
 ***
 
@@ -246,7 +258,6 @@ Hbase为了简化集群部署，已经内置了zookeeper，大部分时候使用
     - Truncating table...
    0 row(s) in 3.9260 seconds
    ```
-
 
 
 
