@@ -8,4 +8,5 @@
 3. Ubuntu18.04搭建Hadoop3.0.3.md
 4. Ubuntu18.04安装Eclipse.md
 5. ubuntu18.04安装Hadoop-Eclipse-Plugin.md
+6. ubuntu18.04搭建HBase.md
 

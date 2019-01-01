@@ -6,55 +6,55 @@ https://blog.csdn.net/Zheng_junming/article/details/82926932
 
 
 
-1. 创建hadoop用户(可以不创建，直接使用当前用户) 
+1. 创建hadoop用户(可以不创建，直接使用当前用户，直接到第二步) 
 
    首先确保在`root`账号下，创建一个`hadoop`用户 
 
-```shell
-sudo useradd -m hadoop -s /bin/bash
-```
+   ``` shell
+   sudo useradd -m hadoop -s /bin/bash
+   ```
 
-​	设置密码
+   设置密码
 
-``` shell
-sudo passwd hadoop
-```
+   ```shell
+   sudo passwd hadoop
+   ```
 
-​	增加管理员权限
+   增加管理员权限
 
-``` shell
-sudo adduser hadoop sudo
-```
+   ```shell
+   sudo adduser hadoop sudo
+   ```
 
-​	使用`su hadoop`即可进行切换
+   使用`su hadoop`即可进行切换
 
  
 
 2. 安装SSH
 
-``` shell
-sudo apt install openssh-server
-```
+   ``` shell
+   sudo apt install openssh-server
+   ```
 
-​	安装后即可使用`ssh localhost`进行登录，首次登录需要密码，输入刚刚设置的密码即可设置免密码登录
+   安装后即可使用`ssh localhost`进行登录，首次登录需要密码，输入刚刚设置的密码即可设置免密码登录
 
-​	先退出刚刚的登录：`exit`
+   先退出刚刚的登录：`exit`
 
- 	切换到`ssh`目录：`cd ~/.ssh/`
+   切换到`ssh`目录：`cd ~/.ssh/`
 
-​	输入以下命令。然后一路回车
+   输入以下命令。然后一路回车
 
-``` shell
-ssh-keygen -t rsa
-```
+   ```shell
+   ssh-keygen -t rsa
+   ```
 
-​	进行授权
+   进行授权
 
-``` shell
-cat ./id_rsa.pub >> ./authorized_keys
-```
+   ``` shell
+   cat ./id_rsa.pub >> ./authorized_keys
+   ```
 
-​	配置完即可使用ssh localhost进行免密登录
+   配置完即可使用ssh localhost进行免密登录
 
  
 
@@ -62,7 +62,7 @@ cat ./id_rsa.pub >> ./authorized_keys
 
    省略
 
- 
+
 
 4. 安装Hadoop
 
@@ -70,19 +70,20 @@ cat ./id_rsa.pub >> ./authorized_keys
 
    下载完安装到`/opt`
 
-``` shell
-sudo tar -zxf ~/Downloads/hadoop-3.0.3.tar.gz -C /opt
-cd / opt
-sudo mv ./hadoop-3.0.3/ ./hadoop  
-sudo chown -R hadoop ./hadoop
-```
+   ``` shell
+   sudo tar -zxf ~/Downloads/hadoop-3.0.3.tar.gz -C /opt
+   cd / opt
+   sudo mv ./hadoop-3.0.3/ ./hadoop  
+   sudo chown -R hadoop ./hadoop
+   ```
 
-​	可以使用以下命令查看是否安装成功
+   可以使用以下命令查看是否安装成功
 
-``` shell
-cd /opt/hadoop
-./bin/hadoop version
-```
+   ``` shell
+   cd /opt/hadoop
+   ./bin/hadoop version
+   ```
+
 
 * 单机模式配置
 
@@ -124,7 +125,7 @@ cd /opt/hadoop
 
   修改为
 
-  ``` shell
+  ``` xml
   <configuration>
       <property>
           <name>hadoop.tmp.dir</name>
@@ -146,7 +147,7 @@ cd /opt/hadoop
 
   修改为
 
-  ``` shell
+  ``` xml
   <configuration>
       <property>
           <name>dfs.replication</name>
@@ -177,15 +178,13 @@ cd /opt/hadoop
   ./sbin/start-dfs.sh
   ```
 
-
-
   如果出现以下警告
 
   ``` shell
   WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
   ```
 
-  则需要修改`hadoop-env.sh`文件
+   则需要修改`hadoop-env.sh`文件
 
   ``` shell
   sudo vi ./etc/hadoop/hadoop-env.sh
@@ -197,8 +196,6 @@ cd /opt/hadoop
   export HADOOP_OPTS="-Djava.library.path=${HADOOP_HOME}/lib/native"
   ```
 
-
-
   启动后我们可以运行jps命令查看端口信息
 
   ``` shell
@@ -208,9 +205,15 @@ cd /opt/hadoop
   30974 DataNode
   ```
 
+* 访问http://localhost:50070
+
+  <img src="./imgs/localhost50070Web_Interface.png">
+
   证明运行成功
 
-* 运行Hadoop伪分布式实例
+
+
+  * 运行Hadoop伪分布式实例
 
   ``` shell
   ./bin/hdfs dfs -mkdir -p /user/hadoop
@@ -276,9 +279,9 @@ cd /opt/hadoop
 
   然后重启hdfs，再次运行实例如果遇到以下错误
 
-   ``` shell
+  ``` shell
   Name node is in safe mode
-   ```
+  ```
 
   在分布式文件系统启动的时候，开始的时候会有安全模式，当分布式文件系统处于安全模式的情况下，文件系统中的内容不允许修改也不允许删除，直到安全模式结束。安全模式主要是为了系统启动的时候检查各个DataNode上数据块的有效性，同时根据策略必要的复制或者删除部分数据块。运行期通过命令也可以进入安全模式。
 
