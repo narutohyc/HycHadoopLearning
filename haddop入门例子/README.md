@@ -16,12 +16,12 @@ https://www.imooc.com/learn/890
 * 知识点：
 
 1. Hadoop的分布式缓存DistributedCache
-
-2. 单词数统计
-3. mapreduce实现矩阵相乘
-4. 基于物品的推荐算法
-5. 基于用户的推荐算法
-6. 基于内容的推荐算法
+2. 单词数统计WordCount
+3. mapreduce实现矩阵相乘matrix
+4. 基于物品的推荐算法itemcf
+5. 基于用户的推荐算法usercf
+6. 基于内容的推荐算法contentcf
+7. HBase基本操作hbasetest
 
 
 
