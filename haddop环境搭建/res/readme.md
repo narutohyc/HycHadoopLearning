@@ -8,10 +8,12 @@
 6. log4j-1.2.14.jar
 7. log4j.properties
 8. hbase-1.4.9-bin.tar.gz
+9. Anaconda3-5.2.0-Linux-x86_64.sh
+10. pycharm-professional-2018.3.2.tar.gz
 
 
 
 ​	以上资源已放在百度网盘
 
-​	链接：https://pan.baidu.com/s/1k4yywsSU9GgjtLnoPrAdQQ 
-​	提取码：4hyd 
+​	链接：https://pan.baidu.com/s/1AAIQGNL7U6f-zsBk4ifg_g 
+​	提取码：xulj 
