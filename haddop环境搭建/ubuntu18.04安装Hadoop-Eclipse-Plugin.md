@@ -1,4 +1,6 @@
-**安装Hadoop-Eclipse-Plugin**
+## 安装Hadoop-Eclipse-Plugin
+
+<img src="http://upload-images.jianshu.io/upload_images/15675864-952291e89189c8a8.jpg">
 
 ​	https://blog.csdn.net/cuihaolong/article/details/51643505
 

@@ -1,5 +1,7 @@
 # 如何在ubuntu18.04中设置使用中文输入法
 
+<img src="http://upload-images.jianshu.io/upload_images/15675864-952291e89189c8a8.jpg">
+
 https://www.cnblogs.com/YMaster/p/8967233.html
 
 ubuntu 在最新的版本中已经可以不用用户自己单独去下载中文输入法使用了，本次使用为 ubuntu18.04LTS版本(登陆是界面选择的是ubuntu on wayland)，设置方式非常简单

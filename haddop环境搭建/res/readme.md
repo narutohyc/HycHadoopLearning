@@ -1,3 +1,5 @@
+<img src="http://upload-images.jianshu.io/upload_images/15675864-952291e89189c8a8.jpg">
+
 以下为ubuntu18.04下hadoop环境搭建Eclipse资源
 
 1. eclipse-jee-2018-12-R-linux-gtk-x86_64.tar.gz(可直接在官网下载: https://www.eclipse.org/downloads/)

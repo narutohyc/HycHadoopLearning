@@ -1,5 +1,6 @@
 # Hadoop伪分布环境搭建
 
+<img src="http://upload-images.jianshu.io/upload_images/15675864-952291e89189c8a8.jpg">
 
 这里介绍了在Ubuntu18.04下的hadoop环境配置，并配置eclipse环境，安装顺序如下：
 

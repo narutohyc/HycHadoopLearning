@@ -1,5 +1,7 @@
 # Ubuntu下安装jdk
 
+<img src="http://upload-images.jianshu.io/upload_images/15675864-952291e89189c8a8.jpg">
+
 https://www.cnblogs.com/ericli-ericli/p/7070874.html
 
 * **步骤1**：下载jdk
@@ -20,7 +22,7 @@ https://www.cnblogs.com/ericli-ericli/p/7070874.html
 
 * **步骤5**：配置环境变量
     * sudo gedit /etc/environment
-    ``` python
+    ``` shell
     PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$JAVA_HOME/bin"
     export CLASSPATH=.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
     export JAVA_HOME=/opt/java/jdk1.8
@@ -33,7 +35,7 @@ https://www.cnblogs.com/ericli-ericli/p/7070874.html
     * 为了预防重启后，配置的环境变量无效，配置所有用户的环境变量
     * sudo gedit /etc/profile
     * 在文件的最后添加以下内容：
-    ``` python
+    ``` shell
     # set Java environment
     export JAVA_HOME=/opt/java/jdk1.8
     export JRE_HOME=$JAVA_HOME/jre

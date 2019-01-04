@@ -4,6 +4,8 @@
 
 # 如何在ubuntu18.04中搭建HBase环境
 
+<img src="http://upload-images.jianshu.io/upload_images/15675864-952291e89189c8a8.jpg">
+
 安装版本HBase安装要求：
 
 JDK1.7以上
