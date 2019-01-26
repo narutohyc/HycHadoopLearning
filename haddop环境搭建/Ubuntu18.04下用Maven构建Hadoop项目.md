@@ -178,9 +178,11 @@ Maven项目有如下通用约定，
     <packaging>jar</packaging>
     <name>TestArtifactId</name>
     <url>http://maven.apache.org</url>
+	
 
     <properties>
     	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<hadoop.version>2.8.5</hadoop.version>
     </properties>
 
     <dependencies>
@@ -190,35 +192,43 @@ Maven项目有如下通用约定，
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        
+        <dependency>
+            <groupId>org.apache.mrunit</groupId>
+            <artifactId>mrunit</artifactId>
+            <version>1.1.0</version>
+            <classifier>hadoop2</classifier>
+            <scope>test</scope>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-common</artifactId>
-            <version>2.8.5</version>
+            <version>${hadoop.version}</version>
         </dependency>
         
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-hdfs</artifactId>
-            <version>2.8.5</version>
+            <version>${hadoop.version}</version>
         </dependency>
         
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-mapreduce-client-core</artifactId>
-            <version>2.8.5</version>
+            <version>${hadoop.version}</version>
         </dependency>
         
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-mapreduce-client-jobclient</artifactId>
-            <version>2.8.5</version>
+            <version>${hadoop.version}</version>
         </dependency>
         
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-mapreduce-client-common</artifactId>
-            <version>2.8.5</version>
+            <version>${hadoop.version}</version>
         </dependency>
     </dependencies>
 </project>
